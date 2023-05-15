@@ -9,6 +9,7 @@ import retrofit2.Response
 
 class AnyCallBackRetorfit {
 
+    // val responseBody = MutableLiveData<Any>()
     val responseBody: MutableLiveData<Any> = MutableLiveData()
 
     fun getAnyResponse(

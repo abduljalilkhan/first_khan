@@ -32,6 +32,19 @@ android {
     buildFeatures {
         viewBinding true
     }
+    lintOptions {
+        // set to true to turn off analysis progress reporting by lint
+
+        quiet true
+
+        // if true, stop the gradle build if errors are found
+
+        abortOnError false
+
+        // do not ignore warnings
+
+        warningsAsErrors true
+    }
 }
 
 sonarqube {
@@ -59,7 +72,7 @@ sonarqube {
 
         property "sonar.projectVersion", "1.0"
 
-        property "sonar.analysis.mode", "publish"
+        property "sonar.analysis.mode", "debug"
 
         property "sonar.language", "java"
 
