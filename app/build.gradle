@@ -1,5 +1,8 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+//    id 'org.jlleitschuh.gradle.ktlint' version '9.2.1'
+    id 'org.sonarqube' version '4.0.0.2929'
 }
 
 android {
@@ -26,9 +29,91 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions {
+        // set to true to turn off analysis progress reporting by lint
+
+        quiet true
+
+        // if true, stop the gradle build if errors are found
+
+        abortOnError false
+
+        // do not ignore warnings
+
+        warningsAsErrors true
+    }
 }
 
+sonarqube {
+    properties {
+//        property "sonar.projectName", "GitHubMvvM"
+//        property "sonar.projectKey", "GitHubMvvM"
+//        property "sonar.host.url", "http://localhost:9000"
+//        property "sonar.tests", ["src/test/java"]
+//        property "sonar.test.inclusions", "**/*Test*/**"
+//        property "sonar.sourceEncoding", "UTF-8"
+//        property "sonar.sources", "src/main/java"
+//        property "sonar.android.lint.report", "./build/outputs/lint-results-debug.xml"
+//        property "sonar.login", "admin"
+//        property "sonar.password", "ajkhan1_.S"
+//        property "sonar.exclusions", '**/*Test*/**,' +
+//            '*.json,' +
+//            '**/*test*/**,' +
+//            '**/.gradle/**,' +
+//            '**/R.class'
+
+
+        property "sonar.projectName", "GitHubMvvM"
+
+        property "sonar.projectKey", "GitHubMvvM"
+
+        property "sonar.projectVersion", "1.0"
+
+        property "sonar.analysis.mode", "debug"
+
+        property "sonar.language", "java"
+
+        property 'sonar.sourceEncoding', "UTF-8"
+
+        property "sonar.sources", "./src/main"
+
+        //property "sonar.exclusions", "**/*Entity.java"
+
+        //  property "sonar.exclusions", "src/main/java/com/apparkb/model/**, **/*Entity.java"
+
+        property "sonar.host.url", "http://localhost:9000"
+
+        property "sonar.login", "admin"
+
+        property "sonar.profile", "testlint"
+
+        property 'sonar.import_unknown_files', true
+
+        property "sonar.android.lint.report", "./build/outputs/lint-results-debug.xml"
+
+        property "sonar.password", "ajkhan1_.S"
+
+        property "sonar.java.binaries", "build/"
+
+
+
+    }
+}
+
+//sonarqube {
+//    properties {
+//        property("sonar.projectKey", "myProjectKey")
+//        property("sonar.organization", "myOrganization")
+//        property("sonar.host.url", "https://sonarcloud.io")
+//    }
+//}
+
 dependencies {
+    implementation 'androidx.core:core-ktx:+'
+    def lifecycle_version = "2.6.1"
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -36,4 +121,33 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+//    // ViewModel
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+//    // LiveData
+//    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+//    // Lifecycles only (without ViewModel or LiveData)
+//    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+
+    implementation "androidx.core:core-ktx:1.9.0"
+
+    //retrofit and gson
+    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
 }
