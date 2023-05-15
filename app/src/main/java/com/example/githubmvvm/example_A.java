@@ -1,6 +1,8 @@
 package com.example.githubmvvm;
 
 public class example_A {
+
+    private String abc="";
     private void repeatcode1() {
         LogCalls_Debug.INSTANCE.d(LogCalls_Debug.TAG, "");
     }
