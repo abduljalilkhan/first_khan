@@ -49,8 +49,8 @@ android {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "GitHubMvvM1"
-        property "sonar.projectKey", "GitHubMvvM1"
+        property "sonar.projectName", "GitHubMvvM"
+        property "sonar.projectKey", "GitHubMvvM"
         property "sonar.host.url", "http://localhost:9000"
         property "sonar.tests", ["src/test/java"]
         property "sonar.test.inclusions", "**/*Test*/**"
