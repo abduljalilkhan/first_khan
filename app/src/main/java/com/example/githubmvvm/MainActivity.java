@@ -8,17 +8,9 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.githubmvvm.Fragment.FirstFragment;
 import com.example.githubmvvm.Fragment.SecondFragment;
-import com.example.githubmvvm.ViewModelFst.BidsRegisteredResponse;
-import com.example.githubmvvm.ViewModel_Stuff.FirstViewModel;
+import com.example.githubmvvm.ViewModel_stuff.FirstViewModel;
 import com.example.githubmvvm.databinding.ActivityMainBinding;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
