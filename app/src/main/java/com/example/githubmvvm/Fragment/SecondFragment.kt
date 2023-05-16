@@ -12,7 +12,7 @@ import com.example.githubmvvm.LogCalls_Debug.TAG
 import com.example.githubmvvm.LogCalls_Debug.d
 import com.example.githubmvvm.MainActivity
 import com.example.githubmvvm.ViewModelFst.BidsRegisteredResponse
-import com.example.githubmvvm.ViewModel_Stuff.FirstViewModel
+import com.example.githubmvvm.ViewModel_stuff.FirstViewModel
 import com.example.githubmvvm.databinding.SecondFragmentBinding
 import com.google.gson.Gson
 

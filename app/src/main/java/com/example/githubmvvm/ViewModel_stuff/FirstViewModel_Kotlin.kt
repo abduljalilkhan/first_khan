@@ -1,4 +1,4 @@
-package com.example.githubmvvm.ViewModel_Stuff
+package com.example.githubmvvm.ViewModel_stuff
 
 import android.content.Context
 import androidx.lifecycle.*
