@@ -1,4 +1,4 @@
-package com.mypcp.cannon_auction.Network_Stuff
+package com.example.githubmvvm.Network_Stuff
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

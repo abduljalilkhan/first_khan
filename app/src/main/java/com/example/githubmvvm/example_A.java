@@ -25,5 +25,7 @@ public class example_A {
             LogCalls_Debug.INSTANCE.d(LogCalls_Debug.TAG,"do nothing");
         }
         repeatcode2();
+        repeatcode2();
+        repeatcode2();
     }
 }

@@ -1,0 +1,12 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¥­í8Íí‘›‚1
+E
+java:S5411"(Use a primitive boolean expression here.(ŞĞı“8Îí‘›‚1
+`
+java:S2583"CChange this condition so that it does not always evaluate to "true"(ŞĞı“8áí‘›‚1
+x
+java:S3923"[Remove this conditional structure or edit its code blocks so that they're not all the same.(ŞĞı“8ïí‘›‚1
+I
+java:S1068"'Remove this unused "abc" private field.(¡±Ñ®øÿÿÿÿ8ñí‘›‚1
+R
+java:S1144"0Remove this unused private "repeatcode1" method.(®’°ìùÿÿÿÿ8ñí‘›‚1

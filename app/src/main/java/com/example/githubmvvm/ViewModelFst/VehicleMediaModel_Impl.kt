@@ -2,10 +2,11 @@ package com.example.githubmvvm.ViewModelFst
 
 import androidx.lifecycle.MutableLiveData
 import com.example.githubmvvm.Network_Stuff.AnyCallBackRetorfit
+import com.example.githubmvvm.Network_Stuff.ApiInterface
+import com.example.githubmvvm.Network_Stuff.ApiRetrofit
 import com.example.githubmvvm.Network_Stuff.CommanWebApiParams
 import com.example.githubmvvm.Network_Stuff.OnFinishedListner
-import com.mypcp.cannon_auction.Network_Stuff.ApiInterface
-import com.mypcp.cannon_auction.Network_Stuff.ApiRetrofit
+
 
 class VehicleMediaModel_Impl(finishedLIstner: OnFinishedListner) {
 

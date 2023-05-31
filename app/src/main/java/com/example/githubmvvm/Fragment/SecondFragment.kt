@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.githubmvvm.LogCalls_Debug
 import com.example.githubmvvm.LogCalls_Debug.TAG
 import com.example.githubmvvm.LogCalls_Debug.d
 import com.example.githubmvvm.MainActivity
 import com.example.githubmvvm.ViewModelFst.BidsRegisteredResponse
+import com.example.githubmvvm.ViewModelFst.Vehicle
 import com.example.githubmvvm.ViewModel_stuff.FirstViewModel
 import com.example.githubmvvm.databinding.SecondFragmentBinding
 import com.google.gson.Gson
@@ -146,6 +148,12 @@ class SecondFragment : Fragment() {
                 LogCalls_Debug.d(TAG, it[a].BidderID + " " + it[a].DealerTitle + " " + it[a].VIN)
             }
         })
+
+//        viewModel.bidsTransformResponse.observe(viewLifecycleOwner, object : Observer<List<Vehicle?>?> {
+//            fun onChanged(vehicles: List<Vehicle?>) {
+//                    d(TAG + " FirstFragment Response bidsTransformResponse", "" + vehicles.size)
+//                }
+//            })
 
 //        //Live data observe
 //        viewModel.getNavigateToDetails().observe(getViewLifecycleOwner(), strCount -> {
